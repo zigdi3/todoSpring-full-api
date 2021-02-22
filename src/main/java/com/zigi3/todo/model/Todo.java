@@ -34,9 +34,4 @@ public class Todo {
 	@Column
 	private LocalDateTime doneDate;
 
-public static void main(String [] args)
-{ Todo todo = new Todo();
-	
-}
-
 }
