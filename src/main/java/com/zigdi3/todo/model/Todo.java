@@ -32,15 +32,15 @@ public class Todo {
 	private Boolean done;
 	
 	@Column
-	
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
 	private LocalDateTime createdDate;
 	
 	@Column
 	private LocalDateTime doneDate;
 
-@PrePersist
-public void beforeSave( ) {
+	@PrePersist	
+public void BeforeSave(){
 	setCreatedDate(LocalDateTime.now());
 }
+
 }
