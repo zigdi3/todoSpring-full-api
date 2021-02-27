@@ -18,7 +18,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Todo {
-
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
@@ -32,15 +31,15 @@ public class Todo {
 	private Boolean done;
 	
 	@Column
+	
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
 	private LocalDateTime createdDate;
 	
 	@Column
 	private LocalDateTime doneDate;
 
-	@PrePersist	
-	public void BeforeSave(){
+@PrePersist
+public void beforeSave( ) {
 	setCreatedDate(LocalDateTime.now());
 }
-
 }

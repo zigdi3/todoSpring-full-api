@@ -8,14 +8,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.zigdi3.todo.model.*;
+import com.zigdi3.todo.model.Todo;
 import com.zigdi3.todo.repository.TodoRepository;
+
 
 @SpringBootApplication
 public class TodoApplication {
 	
-	//@Autowired
-	//private TodoRepository todoRepository;
+	@Autowired
+	private TodoRepository todoRepository;
 	
 	@Bean
 	public CommandLineRunner init () {
@@ -24,9 +25,9 @@ public class TodoApplication {
 			@Override
 			public void run(String... args) throws Exception {
 				Todo todo = new Todo();
-// 				  System.out.println(Locale.getDefault());
-	todo.setCreatedDate(LocalDateTime.now());
-	todo.setDescription("Nova Nota!");
+			 // System.out.println(Locale.getDefault());
+				todo.setCreatedDate(LocalDateTime.now());
+				todo.setDescription("Nova Nota!");
 						
 			
 			}
