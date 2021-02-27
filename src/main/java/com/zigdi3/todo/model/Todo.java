@@ -1,4 +1,4 @@
-package com.zigi3.todo.model;
+package com.zigdi3.todo.model;
 
 import java.time.LocalDateTime;
 
@@ -39,7 +39,7 @@ public class Todo {
 	private LocalDateTime doneDate;
 
 	@PrePersist	
-public void BeforeSave(){
+	public void BeforeSave(){
 	setCreatedDate(LocalDateTime.now());
 }
 

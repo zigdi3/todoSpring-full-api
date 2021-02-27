@@ -13,8 +13,22 @@ apiURL: string = 'http://localhost:8080/api/todos'
 private http: HttpClient
 
   ){ }
-save(todo: Todo) : Observable<Todo>{
-return this.http.post<Todo>(this.apiURL, todo)  
 
-}
+    save(todo: Todo) : Observable<Todo>{
+    return this.http.post<Todo>(this.apiURL, todo)  
+    }
+ toList() : Observable<Todo[]>{
+   return this.http.get<Todo[]>(this.apiURL);
+ }
+
+    delete(id: number) : Observable <void>{
+      const url = `${this.apiURL}/${id}`
+      return this.http.delete<void>(url)
+    }
+
+    mmarkedDone(id: number) : Observable<Todo>{
+      const url = `${this.apiURL}/${id}/done`
+            return this.http.patch<Todo>(url, {})
+ 
+    }
 }
