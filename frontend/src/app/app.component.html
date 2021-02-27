@@ -1,19 +1,22 @@
-<nav class="navbar navbar-dark bg-dark">
-<a class="navbar-brand">Todo App</a>
-</nav> 
-
-<div class="container mt-4">
-
-    <h3>Todos</h3>
-    <hr>
-    <form [formGroup]="form" (ngSubmit)="submit()" > 
+<hr> <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Todo App</a>
+  </nav> 
+  
+  <div class="container mt-4">
+  
+      <h3>Todos</h3>
+      <hr/>
+      <form [formGroup]="fnotas" (ngsubmit)="submit()">
         <div class="row">
-              <div class="col-md-6">
-                <input type="text" class="form-control" formControlname="description">
-              </div>
-              <div class="col-md-1">
-              <button type="submit" class="btn  btn-primary">Add</button>
-              </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" formControl="description">
+          </div>
+          <div class="col-md-1">
+          <button type="submit" class="btn  btn-primary">Add</button>
+          </div>
         </div>
-    </form>
-</div>
+
+
+      </form>
+  </div>
+  
