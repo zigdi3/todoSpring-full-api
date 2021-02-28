@@ -21,7 +21,7 @@ import com.zigdi3.todo.repository.TodoRepository;
 
 @RestController
 @RequestMapping("/api/todos")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class TodoController {
 	
 	@Autowired
